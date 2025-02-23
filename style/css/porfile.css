@@ -1,0 +1,286 @@
+.profile {
+  overflow: hidden;
+  min-width: 300px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  width: auto;
+}
+
+.profile__container {
+  width: 370px;
+  background-color: rgb(44, 39, 48);
+  display: grid;
+  place-items: center;
+  margin: 0px;
+  border-radius: 20px;
+  overflow-y: auto;
+  height: 86vh;
+}
+
+.profile.active {
+  right: 0;
+  animation: fadeIn 0.3s ease-in-out;
+  transform: translateX(-10px);
+  opacity: 1;
+}
+
+.about button {
+  display: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bb {
+  padding-top: 5px;
+  max-height: 100%;
+  width: 80%;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  background-color: rgba(252, 251, 253, 0.05);
+}
+
+.profile__block-1 {
+  padding-top: 5px;
+  max-height: 100%;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: -10px;
+  background-color: rgba(252, 251, 253, 0.05);
+}
+
+/* Скрываем скроллбар полностью */
+.profile__container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Для Firefox */
+.profile__block-1 {
+  scrollbar-width: none;
+}
+
+.profile__block-1 * {
+  margin: 5px 0 0 0;
+}
+
+/* IMG */
+.profile__img {
+  background-image: url(../../assets/img/about.jpg);
+  background-size: cover;
+  max-width: 300px;
+  width: 90%;
+  height: 300px;
+}
+
+.profile__img .about {
+  width: 75px;
+  height: 25px;
+  background-color: rgba(252, 251, 253, 0.14);
+  margin-left: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-top: 1px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(252, 251, 253, 0.39);
+  }
+
+  &:active {
+    background-color: rgba(252, 251, 253, 0.836);
+  }
+}
+
+/* Title */
+
+.porfile__title {
+  text-align: start;
+  margin-right: 140px;
+}
+
+.porfile__title h2 {
+  font-size: 22px;
+}
+
+.porfile__title .inf {
+  display: flex;
+  color: gray;
+}
+
+.porfile__title .inf .slash {
+  color: gray;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.porfile__title,
+.profile__subtitle {
+  margin-left: 15px;
+}
+
+/* Button */
+.profile__button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile__button button {
+  color: #fff;
+  font-size: 15px;
+  margin-left: 5px;
+  padding: 0 10px;
+}
+
+.profile__button .tg {
+  width: 156px;
+
+  height: 36px;
+  background-color: rgba(113, 76, 244, 1);
+  border-radius: 5px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 1.6;
+  }
+}
+
+.profile__button .email {
+  width: 156px;
+
+  height: 36px;
+  border: 1px solid #8d8d8d;
+  background-color: #ffffff00;
+  border-radius: 5px;
+  transition: 0.3s;
+
+  &:hover {
+    border: 1px solid #fff;
+  }
+  &:active {
+    background-color: #ffffff42;
+  }
+}
+
+/* subtitle */
+.profile__subtitle {
+  color: rgba(252, 251, 253, 0.4);
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.profile__subtitle p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* MEDIA */
+.about-m {
+  width: 115px;
+  height: 30px;
+  background-color: rgba(156, 151, 161, 0.473);
+
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-top: 1px;
+  transition: 0.3s;
+  cursor: pointer;
+  padding-top: 5px;
+  display: flex;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-right: 10px;
+  display: none;
+
+  &:hover {
+    background-color: rgba(252, 251, 253, 0.39);
+  }
+
+  &:active {
+    background-color: rgba(252, 251, 253, 0.836);
+  }
+}
+
+.about-m button {
+  background-color: #aa000000;
+  color: #fff;
+  width: 115px;
+  height: 30px;
+  margin-top: -10px;
+}
+
+.about-m img {
+  margin-top: 5px;
+}
+
+/* Адаптивные стили для различных размеров экрана */
+
+@media (max-width: 1950px) {
+  .profile__button {
+    width: 90%; /* Уменьшаем ширину кнопок */
+    padding: 10px; /* Уменьшаем внутренние отступы */
+    font-size: 1em; /* Уменьшаем размер шрифта */
+  }
+}
+
+@media (max-width: 1750px) {
+  .profile__button {
+    width: 90%; /* Уменьшаем ширину кнопок */
+    padding: 10px; /* Уменьшаем внутренние отступы */
+    font-size: 1em; /* Уменьшаем размер шрифта */
+  }
+}
+
+@media (max-width: 1550px) {
+  .profile__button {
+    width: 80%; /* Уменьшаем ширину кнопок */
+    padding: 10px; /* Уменьшаем внутренние отступы */
+    font-size: 1em; /* Уменьшаем размер шрифта */
+  }
+}
+
+@media (max-width: 980px) {
+  .profile {
+    right: -400px;
+    position: fixed;
+  }
+
+  .main__title {
+    max-width: 99%;
+    width: 99%;
+  }
+
+  .about-m {
+    display: block;
+  }
+
+  .about button {
+    color: #fff;
+    display: block;
+    background-color: #be000000;
+  }
+
+  .about button img {
+    margin-right: 5px;
+  }
+
+  .about p {
+    display: none;
+  }
+}

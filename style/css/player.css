@@ -1,0 +1,227 @@
+.player {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1700px;
+  width: 100vw;
+  height: 100px;
+  background-color: rgba(16, 14, 24, 1);
+  bottom: 0;
+}
+
+.play__center {
+  margin-top: 20px;
+}
+
+.player__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.player__nav * {
+  margin-left: 6px;
+}
+
+.player__bar {
+  position: relative;
+}
+
+.player__bar input[type='range'] {
+  -webkit-appearance: none;
+  width: 600px;
+  height: 7px;
+  border-radius: 5px;
+  background: rgba(252, 251, 253, 0.14);
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.player__bar input[type='range']::-webkit-slider-runnable-track {
+  height: 7px;
+  border-radius: 5px;
+  background: rgba(252, 251, 253, 0.14);
+}
+
+.player__bar input[type='range']::-moz-range-progress {
+  background: rgb(255, 255, 255);
+  height: 7px;
+  border-radius: 5px;
+}
+
+.player__bar input[type='range']::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) var(--progress, 0%),
+    rgba(72, 63, 82, 0.14) var(--progress, 0%)
+  );
+}
+
+.player__bar input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #48ff00;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -2px;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.player__bar input[type='range']:hover::-webkit-slider-thumb,
+.player__bar input[type='range']:active::-webkit-slider-thumb {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.player__bar input[type='range']:hover::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+.player__volume {
+  display: flex;
+  margin-top: 40px;
+  margin-right: 30px;
+}
+
+.player__volume img {
+  width: 24px;
+  margin-top: -5px;
+}
+.volume__bar {
+  width: 120px;
+  height: 7px;
+  background: rgba(252, 251, 253, 0.14);
+  border-radius: 5px;
+  position: relative;
+}
+
+.volume__progress {
+  width: 0%;
+  height: 7px;
+  background: rgb(255, 255, 255); /* Белый цвет */
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.1s ease;
+}
+
+.volume__bar input[type='range'] {
+  -webkit-appearance: none;
+  width: 120px;
+  height: 7px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.volume img {
+  margin-right: 10px;
+}
+
+.player__info {
+  display: flex;
+  margin-left: 10px;
+}
+
+.player__info img {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+.pp__text {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.pp__text h1 {
+  font-size: 25px;
+}
+
+.pp__text p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.volume__bar input[type='range']::-webkit-slider-runnable-track {
+  height: 7px;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) var(--progress, 0%),
+    rgba(72, 63, 82, 0.14) var(--progress, 0%)
+  );
+}
+
+.volume__bar input[type='range']::-moz-range-progress {
+  background: rgb(255, 255, 255);
+  height: 7px;
+  border-radius: 5px;
+}
+
+.volume__bar input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #48ff00;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -2px;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.volume__bar input[type='range']:hover::-webkit-slider-thumb,
+.volume__bar input[type='range']:active::-webkit-slider-thumb {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.volume__bar input[type='range']:hover::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+@media (max-width: 917px) {
+  .player__volume {
+    display: none;
+  }
+
+  .player {
+    height: 100px;
+  }
+
+  .player__bar {
+    position: absolute;
+    margin-left: -380px;
+  }
+
+  .player__nav {
+    margin-left: -150px;
+    margin-top: 20px;
+  }
+
+  .player__bar input[type='range'] {
+    height: 5px;
+    width: 350px;
+  }
+
+  .player__info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .player__info h1 {
+    font-size: 18px;
+  }
+
+  .player__info p {
+    font-size: 14px;
+  }
+}

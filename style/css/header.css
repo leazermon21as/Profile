@@ -1,0 +1,106 @@
+body,
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #100e18;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio {
+  display: flex;
+
+  max-width: 1900px;
+}
+
+/*================= Color ==================*/
+.gray {
+  color: rgba(252, 251, 253, 0.4);
+}
+
+.right {
+  text-align: right;
+}
+/* ================== HEADER ================= */
+
+.header {
+  margin-right: 7px;
+}
+
+.header__brend {
+  background-color: #262229;
+  width: 76px;
+  height: 83vh;
+
+  border-radius: 20px;
+  margin-top: 5px;
+}
+
+.header__brend-icon {
+  display: grid;
+  place-items: center;
+  overflow-y: scroll;
+  height: 100%;
+  scrollbar-width: none;
+}
+
+.header__brend-icon::-webkit-scrollbar {
+  display: none;
+}
+
+.header__brend-icon img {
+  margin-top: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.header__brend-icon * {
+  width: 70px;
+  height: 70px;
+  background-color: #fcfbfd0d;
+  border-radius: 5px;
+}
+
+.circle {
+  border-radius: 50px;
+}
+
+.not {
+  background-color: #ffffff00;
+}
+.music__container .header__brend {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .header {
+    display: none;
+  }
+
+  .music__container .header__brend-icon {
+    display: flex;
+    padding-right: 40px;
+  }
+
+  .music__container .header__brend {
+    width: 90vw;
+    height: 70px;
+    background-color: #100e1800;
+    display: block;
+  }
+
+  .music__container .header__brend img {
+    margin-left: 10px;
+    margin-top: -3px;
+  }
+}
